@@ -8,7 +8,7 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Hero
   - Water
   - UI
   - 
@@ -49,6 +49,9 @@ TagManager:
     locked: 0
   - name: Platforms
     uniqueID: 2395106941
+    locked: 0
+  - name: Hero
+    uniqueID: 3218145567
     locked: 0
   m_RenderingLayers:
   - Default
