@@ -1,4 +1,5 @@
 using System;
+using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -66,11 +67,15 @@ public class PlayerMovement : MonoBehaviour
         if (!myCapsuleCollider.IsTouchingLayers(LayerMask.GetMask("Ladder")))
         {
             myRigidbody.gravityScale = gravityAtStart;
+            myAnimator.SetBool("isClimbing", false);
             return;
         }
         Vector2 climbVelocity = new Vector2(myRigidbody.linearVelocity.x, moveInput.y * climbSpeed);
         myRigidbody.linearVelocity = climbVelocity;
         myRigidbody.gravityScale = gravityClimb;
+
+        bool playerHasVerticalSpeed = Mathf.Abs(myRigidbody.linearVelocity.y) > 0;
+        myAnimator.SetBool("isClimbing", playerHasVerticalSpeed);
         
     }
 }
