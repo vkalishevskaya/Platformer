@@ -11,8 +11,8 @@ TagManager:
   - Hero
   - Water
   - UI
-  - 
-  - 
+  - Ground
+  - Ladder
   - 
   - 
   - 
@@ -52,6 +52,9 @@ TagManager:
     locked: 0
   - name: Hero
     uniqueID: 3218145567
+    locked: 0
+  - name: Ladder
+    uniqueID: 883419005
     locked: 0
   m_RenderingLayers:
   - Default
